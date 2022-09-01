@@ -1,5 +1,6 @@
 const add_btn = document.getElementById('add-btn');
 const save_btn = document.getElementById('save-btn');
+const export_btn = document.getElementById('export-btn');
 const table = document.getElementById('table-to-export');
 
 const date_input = document.querySelector('input[type="date"]');
@@ -17,8 +18,9 @@ var isValid = false;
 
 loadFromLocalStorage();
 
-save_btn.addEventListener('click', function () {
-    addRow();
+save_btn.addEventListener('click', addRow);
+export_btn.addEventListener('click', function () { 
+    exportToExcel('xlsx', 'data', 'data');
 });
 
 //add row to table
