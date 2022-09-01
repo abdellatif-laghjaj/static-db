@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="res/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Mustapha</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Button trigger modal -->
+        <header class="my-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal" id="add-btn">
+                <img src="/res/images/add.png" alt="add" width="28">
+            </button>
+
+            <div class="input-group">
+                <span class="input-group-text">From</span>
+                <input type="date" class="form-control" placeholder="Username" aria-label="Username">
+                <span class="input-group-text">To</span>
+                <input type="date" class="form-control" placeholder="Server" aria-label="Server">
+                <button type="button" class="btn btn-primary">Search</button>
+            </div>
+        </header>
+
+        <!-- Table -->
+        <div class="table-data">
+            <table class="table table-striped my-3" id="table-to-export">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Test2</th>
+                        <th scope="col">Test3</th>
+                        <th scope="col">Test4</th>
+                        <th scope="col">Test5</th>
+                        <th scope="col">Test6</th>
+                        <th scope="col">Test7</th>
+                        <th scope="col">Test8</th>
+                        <th scope="col">Test9</th>
+                        <th scope="col">Test10</th>
+                    </tr>
+                </thead>
+                <tbody id="rows-data">
+    
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="formModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModalLabel">Form data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onSubmit="return false;"">
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test2" class="form-label">Tes2</label>
+                            <input type="text" class="form-control test2" id="test2" name="tes2" placeholder="Tes2">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test3" class="form-label">Tes3</label>
+                            <input type="text" class="form-control test3" id="test3" name="tes3" placeholder="Tes3">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test4" class="form-label">Tes4</label>
+                            <input type="text" class="form-control test4" id="test4" name="tes4" placeholder="Tes4">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test5" class="form-label">Tes5</label>
+                            <input type="text" class="form-control test5" id="test5" name="tes5" placeholder="Tes5">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test6" class="form-label">Tes6</label>
+                            <input type="text" class="form-control test6" id="test6" name="tes6" placeholder="Tes6">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test7" class="form-label">Tes7</label>
+                            <input type="text" class="form-control test7" id="test7" name="tes7" placeholder="Tes7">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test8" class="form-label">Tes8</label>
+                            <input type="text" class="form-control test8" id="test8" name="tes8" placeholder="Tes8">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test9" class="form-label">Tes9</label>
+                            <input type="text" class="form-control test9" id="test9" name="tes9" placeholder="Tes9">
+                        </div>
+                        <div class="mb-3">
+                            <label for="test10" class="form-label">Tes10</label>
+                            <input type="text" class="form-control test10" id="test10" name="tes10" placeholder="Tes10">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 text-uppercase" id="save-btn">save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--JS -->
+    <script src="node_modules/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="res/bootstrap/js/bootstrap.min.js"></script>
+    <script src="res/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
