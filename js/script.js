@@ -87,6 +87,9 @@ function searchByDate(from, to) {
             }
         }
     }
+    //clear search input
+    from_date.value = '';
+    to_date.value = '';
 }
 
 // export as excel file
