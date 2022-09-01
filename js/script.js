@@ -27,7 +27,7 @@ export_btn.addEventListener('click', function () {
 });
 search_btn.addEventListener('click', function () {
     if (from_date.value != '' && to_date.value != '') {
-        searchByDate();
+        searchByDate(from_date.value, to_date.value);
     }else{
         alert('Please select date');
     }
