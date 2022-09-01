@@ -20,7 +20,7 @@ loadFromLocalStorage();
 
 save_btn.addEventListener('click', addRow);
 export_btn.addEventListener('click', function () { 
-    exportToExcel('xlsx', 'data');
+    exportToExcel('xlsx');
 });
 
 //add row to table
@@ -70,7 +70,7 @@ function exportToExcel(type, fn, dl) {
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl ?
         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-        XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
+        XLSX.writeFile(wb, fn || ('data.' + (type || 'xlsx')));
 }
 
 //save to local storage
