@@ -25,6 +25,13 @@ save_btn.addEventListener('click', addRow);
 export_btn.addEventListener('click', function () { 
     exportToExcel('xlsx');
 });
+search_btn.addEventListener('click', function () {
+    if (from_date.value != '' && to_date.value != '') {
+        searchByDate();
+    }else{
+        alert('Please select date');
+    }
+});
 
 //add row to table
 function addRow() {
@@ -65,7 +72,22 @@ function addRow() {
         test10.value = '';
 }
 
-        
+//search by date
+function searchByDate(from, to) {
+    var table = document.getElementById('table-to-export');
+    var tr = table.getElementsByTagName('tr');
+    var td, i, j;
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName('td')[0];
+        if (td) {
+            if (td.innerHTML >= from && td.innerHTML <= to) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
 
 // export as excel file
 function exportToExcel(type, fn, dl) {
