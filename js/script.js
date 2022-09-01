@@ -2,6 +2,9 @@ const add_btn = document.getElementById('add-btn');
 const save_btn = document.getElementById('save-btn');
 const export_btn = document.getElementById('export-btn');
 const table = document.getElementById('table-to-export');
+const from_date = document.getElementById('from-date');
+const to_date = document.getElementById('to-date');
+const search_btn = document.getElementById('search-btn');
 
 const date_input = document.querySelector('input[type="date"]');
 const test2 = document.querySelector('.test2');
