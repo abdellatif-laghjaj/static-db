@@ -20,7 +20,7 @@ loadFromLocalStorage();
 
 save_btn.addEventListener('click', addRow);
 export_btn.addEventListener('click', function () { 
-    exportToExcel('xlsx', 'data', 'data');
+    exportToExcel('xlsx', 'data');
 });
 
 //add row to table
